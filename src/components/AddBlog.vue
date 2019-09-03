@@ -20,7 +20,7 @@
 			</div>
 			<label>作者:</label>
 			<select v-model="blog.author">
-				<option v-for="author in authors">
+				<option v-for="(author, idx) in authors" :key="idx">
 					{{author}}
 				</option>
 			</select>
@@ -38,7 +38,7 @@
 			<p>{{blog.content}}</p>
 			<p>博客分类:</p>
 			<ul>
-				<li v-for="category in blog.categories">
+				<li v-for="(category, idx) in blog.categories" :key="idx">
 					{{category}}
 				</li>
 			</ul>
